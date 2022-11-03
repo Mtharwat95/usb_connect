@@ -6,7 +6,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".MainActivity" >
+        tools:context=".MainActivity"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
 
 
 
@@ -38,24 +40,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            >
 
             <TextView
                 android:id="@+id/info"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:id="@+id/infointerface"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:id="@+id/infoendpoint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
 
         </LinearLayout>
     </ScrollView>

@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
             listUsbDevice.add(device);
 
         }
-
+//        listUsbDevice.get(0)
        if(!listDeviceName.isEmpty()) textInfo.setText(listDeviceName.get(0));
         textInfoInterface.setText("");
         textEndPoint.setText("");
@@ -98,14 +98,13 @@ public class MainActivity extends Activity {
                                            View view, int position, long id) {
                     UsbDevice device = listUsbDevice.get(position);
 
-                    String i = device.toString() + "\n" +
-                            "DeviceID: " + device.getDeviceId() + "\n" +
-                            "DeviceName: " + device.getDeviceName() + "\n" +
-                            "DeviceClass: " + device.getDeviceClass() + " - "
-                            + translateDeviceClass(device.getDeviceClass()) + "\n" +
-                            "DeviceSubClass: " + device.getDeviceSubclass() + "\n" +
-                            "VendorID: " + device.getVendorId() + "\n" +
-                            "ProductID: " + device.getProductId() + "\n" +
+                    String i = /*device.toString() + "\n\n\n" +*/
+                            "DeviceID: " + device.getDeviceId() + "\n\n\n" +
+                            "DeviceName: " + device.getDeviceName() + "\n\n\n" +
+                            "DeviceClass: " + device.getDeviceClass() + " - " + translateDeviceClass(device.getDeviceClass()) + "\n\n\n" +
+                            "DeviceSubClass: " + device.getDeviceSubclass() + "\n\n\n" +
+                            "VendorID: " + device.getVendorId() + "\n\n\n" +
+                            "ProductID: " + device.getProductId() + "\n\n\n" +
                             "InterfaceCount: " + device.getInterfaceCount();
                     textInfo.setText(i);
 
@@ -150,7 +149,7 @@ public class MainActivity extends Activity {
                             + "InterfaceSubclass: " + selectedUsbIf.getInterfaceSubclass() + "\n"
                             + "EndpointCount: " + selectedUsbIf.getEndpointCount();
 
-                    textInfoInterface.setText(sUsbIf);
+//                    textInfoInterface.setText(sUsbIf);
                     checkUsbInterface(selectedUsbIf);
                 }
 
