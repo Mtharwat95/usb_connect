@@ -26,6 +26,7 @@ import java.util.Iterator;
 public class MainActivity extends Activity {
 
     Button btnCheck;
+    Button btnClear;
     TextView textInfo;
     TextView textInfoInterface;
     TextView textEndPoint;
@@ -58,7 +59,28 @@ public class MainActivity extends Activity {
         textEndPoint = (TextView)findViewById(R.id.infoendpoint);
 
         btnCheck = (Button) findViewById(R.id.check);
+        btnClear = (Button) findViewById(R.id.clear_text);
         btnCheck.setOnClickListener(arg0 -> checkDeviceInfo());
+        btnClear.setOnClickListener(arg0 -> clear());
+    }
+
+    private void clear() {
+      textInfo.setText("");
+        textInfoInterface.setText("");
+        textEndPoint.setText("");
+
+        listDeviceName.clear();
+        listUsbDevice.clear();
+        adapterDevice.clear();
+
+
+        listEndPoint.clear();
+        listUsbEndpoint.clear();
+        adapterEndpoint.clear();
+
+        listInterface.clear();
+        listUsbInterface.clear();
+        adapterInterface.clear();
     }
 
     private void checkDeviceInfo() {
