@@ -104,7 +104,7 @@ public class MainActivity extends Activity implements Runnable{
         }
         if(devicesList.size() >1){
             tvResult.setText("Please connect only one device");
-            return;
+//            return;
         }
         device =  devicesList.get(0);
         if(manager.hasPermission(device)) performHandCheck();
@@ -182,7 +182,8 @@ public class MainActivity extends Activity implements Runnable{
                 }
             }
 
-            tvResult.setText("HID interface not found");
+//            tvResult.setText("HID interface not found");
+            tvResult.setText(String.valueOf(interfaceCount));
         }
         return null;
     }
